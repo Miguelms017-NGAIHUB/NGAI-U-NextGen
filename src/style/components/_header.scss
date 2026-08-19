@@ -91,21 +91,21 @@
 }
 
 //Button Hover behaviors
-header:has(#col:hover, #colleges:hover) #col{
+header:has(#col:hover, .elasticCol:hover) #col{
     background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
     color: var(--black-0);
     font-weight: bolder;
     border-radius: 20px 20px 0 0;
     border: 0;
 }
-header:has(#acad:hover, #academies:hover) #acad{
+header:has(#acad:hover, .elasticACD:hover) #acad{
     background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
     color: var(--black-0);
     font-weight: bolder;
     border-radius: 20px 20px 0 0;
     border: 0;
 }
-header:has(#join:hover, #joinMenu:hover) #join{
+header:has(#join:hover, .elasticJoin:hover) #join{
     background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
     color: var(--black-0);
     font-weight: bolder;

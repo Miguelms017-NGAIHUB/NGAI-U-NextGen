@@ -263,7 +263,7 @@ footer {
   display: flex;
 }
 
-.JoinSubList:hover {
+.joinSubList:hover {
   display: flex;
 }
 
@@ -452,7 +452,7 @@ footer {
   background-image: linear-gradient(to left, var(--white-1), var(--join));
 }
 
-header:has(#col:hover, #colleges:hover) #col {
+header:has(#col:hover, .elasticCol:hover) #col {
   background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
   color: var(--black-0);
   font-weight: bolder;
@@ -460,7 +460,7 @@ header:has(#col:hover, #colleges:hover) #col {
   border: 0;
 }
 
-header:has(#acad:hover, #academies:hover) #acad {
+header:has(#acad:hover, .elasticACD:hover) #acad {
   background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
   color: var(--black-0);
   font-weight: bolder;
@@ -468,7 +468,7 @@ header:has(#acad:hover, #academies:hover) #acad {
   border: 0;
 }
 
-header:has(#join:hover, #joinMenu:hover) #join {
+header:has(#join:hover, .elasticJoin:hover) #join {
   background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
   color: var(--black-0);
   font-weight: bolder;
