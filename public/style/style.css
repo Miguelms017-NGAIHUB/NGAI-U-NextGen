@@ -113,7 +113,6 @@ footer {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   width: fit-content;
   position: absolute;
   display: none;
@@ -175,7 +174,6 @@ footer {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   width: fit-content;
   position: absolute;
   display: none;
@@ -229,7 +227,6 @@ footer {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   width: fit-content;
   position: absolute;
   display: none;
