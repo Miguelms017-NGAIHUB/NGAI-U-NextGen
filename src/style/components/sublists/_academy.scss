@@ -1,0 +1,56 @@
+//general design
+.acdSubList{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; //tmp
+    width: fit-content;
+    position: absolute;
+    display: none;
+    right: calc(var(--size-2) + 416px );
+    a{
+        padding: var(--size-1);
+    }
+}
+
+//top Margins
+#ACIM{
+    top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#AICTAaaS{
+    top: calc(var(--size-5) + var(--size-2) + var(--headers) + 8px);
+}
+
+#SA{
+    top: calc(var(--size-5) + (var(--size-2) * 2) + (var(--headers) * 1.65));
+}
+
+#PA{
+    top: calc((var(--size-5) + (var(--size-2) * 2)) * 2.74);
+}
+
+//hover behaviors
+#academies:has(.aa:hover) ~ #ACIM{
+    display: flex;
+}
+
+#academies:has(.ab:hover) ~ #AICTAaaS{
+    display: flex;
+}
+
+#academies:has(.ac:hover) ~ #SA{
+    display: flex;
+}
+
+#academies:has(.ad:hover) ~ #PA{
+    display: flex;
+}
+
+.acdSubList:hover{
+    display: flex;
+}
+
+.elasticACD:hover #academies{
+    display: flex;
+}

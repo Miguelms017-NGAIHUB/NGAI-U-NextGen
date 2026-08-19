@@ -1,0 +1,71 @@
+<header>
+    <div class="mainHeader">
+        <a class="home" href="/index">
+            <h1>NGAI U</h1><!-- Replace with the logo -->
+        </a>
+        <div class="buttons">
+            <button class="btn" id="col">Colleges</button>
+            <button class="btn" id="acad">Academies</button>
+            <button class="btn" id="join">Join Us</button>
+            <input type="checkbox" name="" id="hamShow">
+            <img src="images/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="close">
+            <img src="images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="open">
+        </div>
+    </div>
+    <div class="grad"></div>
+    <div class="elasticCol">
+        <div class="submenu" id="colleges">
+            <a href="" class="subCol ca">College of Artificial Intelligence & Digital Business</a>
+            <a href="" class="subCol cb">College of Robotics, Automation & Emerging Technology</a>
+            <a href="" class="subCol cc">College of Gaming, Simulation & Interactive Technology</a>
+            <a href="" class="subCol cd">College of Sports, Entertainment & Media Technology</a>
+            <a href="" class="subCol ce">College of Business, Consulting & Partnership Certification</a>
+        </div>
+        {% include 'linkPageListCol.njk' %}
+    </div>
+    <div class="elasticACD">
+        <div class="submenu" id="academies">
+            <a href="" class="subAcad aa">ACIM Academy</a>
+            <a href="" class="subAcad ab">AICTAaaS Academy</a>
+            <a href="" class="subAcad ac">NGAI Software Academy</a>
+            <a href="" class="subAcad ad">Partner Academy</a>
+        </div>
+        {% include 'linkPageListACD.njk' %}
+    </div>
+    <div class="elasticJoin">
+        <div class="submenu" id="joinMenu">
+            <a href="" class="subJoin ja">Admissions</a>
+            <a href="" class="subJoin jb">Partners</a>
+            <a href="" class="subJoin">Students Portal</a>
+            <a href="" class="subJoin jc">About</a>
+        </div>
+        {% include 'linkPageListJoin.njk' %}
+    </div>
+
+
+</header>
+<div class="hamMenu">
+    <button class="hamBtn" id="mcol">Colleges</button>
+    <div class="hamMaster" id="hamColleges">
+        <a href="" class="hamLink" id="hclink">College of Artificial Intelligence & Digital Business</a>
+        <a href="" class="hamLink" id="hclink">College of Robotics, Automation & Emerging Technology</a>
+        <a href="" class="hamLink" id="hclink">College of Gaming, Simulation & Interactive Technology</a>
+        <a href="" class="hamLink" id="hclink">College of Sports, Entertainment & Media Technology</a>
+        <a href="" class="hamLink" id="hclink">College of Business, Consulting & Partnership Certification</a>
+    </div>
+    <button class="hamBtn" id="macd">Academies</button>
+    <div class="hamMaster" id="hamAcademy">
+        <a href="" class="hamLink" id="halink">ACIM Academy</a>
+        <a href="" class="hamLink" id="halink">AICTAaaS Academy</a>
+        <a href="" class="hamLink" id="halink">NGAI Software Academy</a>
+        <a href="" class="hamLink" id="halink">Partner Academy</a>
+    </div>
+    <button class="hamBtn" id="mjus">Join Us</button>
+    <div class="hamMaster" id="hamJoin">
+        <a href="" class="hamLink" id="hjlink">Admissions</a>
+        <a href="" class="hamLink" id="hjlink">Partners</a>
+        <a href="" class="hamLink" id="hjlink">Students Portal</a>
+        <a href="" class="hamLink" id="hjlink">About</a>
+    </div>
+
+</div>

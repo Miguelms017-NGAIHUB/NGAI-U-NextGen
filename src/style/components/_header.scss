@@ -1,0 +1,139 @@
+//adding sublists to the code
+@use "sublists/colleges";
+@use "sublists/academy";
+@use "sublists/join";
+
+//Insert Hamburger menu to header
+@use "hamMenu";
+
+//header Layout
+.mainHeader{
+    background-color: var(--primary-300);
+    color: var(--white-1);
+    height: var(--size-5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--size-2);  
+}
+
+//home button style
+.home{
+    color: var(--white-1);
+    text-decoration: none;
+}
+
+//button Alignment
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-1);
+}
+
+//Button style
+.btn{
+    background-color: var(--primary-300);
+    color: var(--white-1);
+    border: 1px solid var(--white-1);
+    border-radius: 20px;
+    font-size: var(--size-1);
+    width: 8em;
+    padding: 0.7em;
+    transition: 0.2s;
+}   
+
+.grad{
+    background-image: linear-gradient(to bottom, var(--primary-300), var(--clear-1));
+    height: var(--headers)
+}
+
+// submenus
+.submenu{
+    position: absolute;
+    right: var(--size-2);
+    top: calc(var(--size-5) + var(--size-2) - 2px);
+    display: none;
+    flex-direction: column;
+    gap: 0.3em;
+    width: 26em;
+    padding-top: var(--size-1);
+    padding-bottom: var(--size-1);
+    transition: 0.5s;
+    background-color: var(--white-1);
+    a{
+        background-image: none;
+        color: var(--black-0);
+        text-decoration: none;
+        padding: var(--size-1);
+        transition: 0.5s
+    }
+}
+
+//hover for submenus
+#colleges{
+    border-radius: 0 20px 20px 20px;
+    a:hover{
+        background-image: linear-gradient(to left, var(--white-1), var(--colleges));
+    }
+}
+#academies{
+    border-radius: 20px 20px 20px 20px;
+    a:hover{
+        background-image: linear-gradient(to left, var(--white-1), var(--academies));
+    }
+}
+#joinMenu{
+    border-radius: 20px 0 20px 20px;
+    a:hover{
+        background-image: linear-gradient(to left, var(--white-1), var(--join));
+    }
+}
+
+//Button Hover behaviors
+header:has(#col:hover, #colleges:hover) #col{
+    background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+    color: var(--black-0);
+    font-weight: bolder;
+    border-radius: 20px 20px 0 0;
+    border: 0;
+}
+header:has(#acad:hover, #academies:hover) #acad{
+    background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+    color: var(--black-0);
+    font-weight: bolder;
+    border-radius: 20px 20px 0 0;
+    border: 0;
+}
+header:has(#join:hover, #joinMenu:hover) #join{
+    background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+    color: var(--black-0);
+    font-weight: bolder;
+    border-radius: 20px 20px 0 0;
+    border: 0;
+}
+header:has(#col:hover) #colleges{
+    display: flex;
+}
+header:has(#acad:hover) #academies{
+    display: flex;
+}
+header:has(#join:hover) #joinMenu{
+    display: flex;
+}
+#colleges:hover{
+    display: flex;
+}
+#academies:hover{
+    display: flex;
+}
+#joinMenu:hover{
+    display: flex;
+}
+
+//On wide screens hides the trigger for Hamburger menu
+@media screen and (max-width: 650px) {
+    .btn, .submenu{
+        display: none;
+    }
+}

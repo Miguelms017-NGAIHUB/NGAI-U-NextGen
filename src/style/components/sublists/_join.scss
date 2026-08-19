@@ -1,0 +1,47 @@
+.joinSubList{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; //tmp
+    width: fit-content;
+    position: absolute;
+    display: none;
+    right: calc(var(--size-2) + 416px );
+    a{
+        padding: var(--size-1);
+    }
+}
+
+//top Margins
+#Admission{
+    top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#Partners{
+    top: calc(var(--size-5) + var(--size-2) + var(--headers) + 8px);
+}
+
+#About{
+    top: calc((var(--size-5) + (var(--size-2) * 2)) * 2.74);
+}
+
+//hover behavior
+#joinMenu:has(.ja:hover) ~ #Admission{
+    display: flex;
+}
+
+#joinMenu:has(.jb:hover) ~ #Partners{
+    display: flex;
+}
+
+#joinMenu:has(.jc:hover) ~ #About{
+    display: flex;
+}
+
+.JoinSubList:hover{
+    display: flex;
+}
+
+.elasticJoin:hover #joinMenu{
+    display: flex;
+}

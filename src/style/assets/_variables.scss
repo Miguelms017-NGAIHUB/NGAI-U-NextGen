@@ -1,0 +1,58 @@
+:root{
+    // color
+    // primary
+    --primary-100: hsl(210, 30%, 07%);
+    --primary-200: hsl(210, 30%, 17%);
+    --primary-300: hsl(210, 30%, 27%); // default
+    --primary-400: hsl(210, 30%, 37%);
+    --primary-500: hsl(210, 30%, 47%);
+
+    // secondary
+    --secondary-100: hsl(340, 80%, 7%);
+    --secondary-200: hsl(340, 80%, 17%);
+    --secondary-300: hsl(340, 80%, 27%); // default
+    --secondary-400: hsl(340, 80%, 37%);
+    --secondary-500: hsl(340, 80%, 47%);
+
+
+    // Black and White
+    --black-0: hsl(0, 0%, 0%);
+    --gray-25: hsl(0, 0%, 25%);
+    --gray-50: hsl(0, 0%, 50%);
+    --gray-75: hsl(0, 0%, 75%);
+    --white-1: hsl(0, 0%, 100%);
+
+    //transparent
+    --clear-1: hsla(0, 0%, 0%, 0%);
+
+    //sections
+    --colleges: hsl(0, 57%, 80%);
+    --academies: hsl(144, 57%, 80%);
+    --join: hsl(192, 57%, 80%);
+
+    //sizes
+    // sizes
+    --size-1: 1em;
+    --size-2: 1.5em;
+    --size-3: 2em;
+    --size-4: 2.5em;
+    --size-5: 3em;
+    --headers: 4em;
+}
+
+// reset and temporary color set
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: wheat; //temporary, erase later
+}
+
+// site layout
+.site{
+    min-height: 100dvh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+}
+

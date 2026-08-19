@@ -1,0 +1,63 @@
+//general design
+.colSubList{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; //tmp
+    width: fit-content;
+    position: absolute;
+    display: none;
+    right: calc(var(--size-2) + 416px );
+    a{
+        padding: var(--size-1);
+    }
+}
+
+//top margins
+#AIDB{
+    top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#RAET{
+    top: calc(var(--size-5) + var(--size-2) + (var(--size-1) *5) - 6px);
+}
+
+#GSIT{
+    top: calc(var(--size-5) + var(--size-2) + (var(--size-1) *10) - 6px);
+}
+
+#SEMT{
+    top: calc(var(--size-5) + var(--size-2) + (var(--size-1) *15) - 6px);
+}
+
+#BCPC{
+    top: calc(var(--size-5) + var(--size-2) + (var(--size-1) *20) - 6px);
+}
+
+//hover behaviors
+#colleges:has(.ca:hover) ~ #AIDB{
+    display: flex;
+}
+
+#colleges:has(.cb:hover) ~ #RAET{
+    display: flex;
+}
+
+#colleges:has(.cc:hover) ~ #GSIT{
+    display: flex;
+}
+
+#colleges:has(.cd:hover) ~ #SEMT{
+    display: flex;
+}
+
+#colleges:has(.ce:hover) ~ #BCPC{
+    display: flex;
+}
+.colSubList:hover{
+    display: flex;
+}
+
+.elasticCol:hover #colleges{
+    display: flex;
+}

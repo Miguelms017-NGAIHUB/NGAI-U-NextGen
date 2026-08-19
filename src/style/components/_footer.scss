@@ -1,0 +1,79 @@
+//footer's basic layout
+footer{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 16em;
+    background-color: var(--black-0);
+    color: var(--white-1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-2)
+}
+
+//link decoration
+.logo, .listLinks{
+    color: var(--white-1);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+//info text
+.info{
+    p{
+        margin: 0;
+        color: var(--gray-75)
+    }
+}
+
+// Head of footer links
+.mainH1{
+    color: var(--white-1);
+    transition: 0.2s;
+    h1{
+        font-size: var(--size-1);
+        margin: 0;
+        margin-bottom: var(--size-1);
+    }
+}
+
+//Lists of footer links
+.listMaster{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--size-3)
+}
+
+//Remove bullets 
+.lists{
+    .footLinks{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+//Hover effects 
+#footCol:hover{
+    color: var(--colleges)
+}
+#footAcad:hover{
+    color: var(--academies)
+}
+#footJoin:hover{
+    color: var(--join)
+}
+
+//Fitting footer links into small screens
+@media screen and (max-width: 1000px) {
+    footer{
+        height: auto;
+        flex-direction: column;
+        gap: var(--size-4);
+        .listMaster{
+            flex-direction: column;
+        }
+    }
+}

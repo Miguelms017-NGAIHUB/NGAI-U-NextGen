@@ -1,0 +1,509 @@
+:root {
+  --primary-100: hsl(210, 30%, 07%);
+  --primary-200: hsl(210, 30%, 17%);
+  --primary-300: hsl(210, 30%, 27%);
+  --primary-400: hsl(210, 30%, 37%);
+  --primary-500: hsl(210, 30%, 47%);
+  --secondary-100: hsl(340, 80%, 7%);
+  --secondary-200: hsl(340, 80%, 17%);
+  --secondary-300: hsl(340, 80%, 27%);
+  --secondary-400: hsl(340, 80%, 37%);
+  --secondary-500: hsl(340, 80%, 47%);
+  --black-0: hsl(0, 0%, 0%);
+  --gray-25: hsl(0, 0%, 25%);
+  --gray-50: hsl(0, 0%, 50%);
+  --gray-75: hsl(0, 0%, 75%);
+  --white-1: hsl(0, 0%, 100%);
+  --clear-1: hsla(0, 0%, 0%, 0%);
+  --colleges: hsl(0, 57%, 80%);
+  --academies: hsl(144, 57%, 80%);
+  --join: hsl(192, 57%, 80%);
+  --size-1: 1em;
+  --size-2: 1.5em;
+  --size-3: 2em;
+  --size-4: 2.5em;
+  --size-5: 3em;
+  --headers: 4em;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: wheat;
+}
+
+.site {
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+footer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 16em;
+  background-color: var(--black-0);
+  color: var(--white-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-2);
+}
+
+.logo, .listLinks {
+  color: var(--white-1);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.info p {
+  margin: 0;
+  color: var(--gray-75);
+}
+
+.mainH1 {
+  color: var(--white-1);
+  transition: 0.2s;
+}
+.mainH1 h1 {
+  font-size: var(--size-1);
+  margin: 0;
+  margin-bottom: var(--size-1);
+}
+
+.listMaster {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--size-3);
+}
+
+.lists .footLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footCol:hover {
+  color: var(--colleges);
+}
+
+#footAcad:hover {
+  color: var(--academies);
+}
+
+#footJoin:hover {
+  color: var(--join);
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    height: auto;
+    flex-direction: column;
+    gap: var(--size-4);
+  }
+  footer .listMaster {
+    flex-direction: column;
+  }
+}
+.colSubList {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: fit-content;
+  position: absolute;
+  display: none;
+  right: calc(var(--size-2) + 416px);
+}
+.colSubList a {
+  padding: var(--size-1);
+}
+
+#AIDB {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#RAET {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) * 5 - 6px);
+}
+
+#GSIT {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) * 10 - 6px);
+}
+
+#SEMT {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) * 15 - 6px);
+}
+
+#BCPC {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) * 20 - 6px);
+}
+
+#colleges:has(.ca:hover) ~ #AIDB {
+  display: flex;
+}
+
+#colleges:has(.cb:hover) ~ #RAET {
+  display: flex;
+}
+
+#colleges:has(.cc:hover) ~ #GSIT {
+  display: flex;
+}
+
+#colleges:has(.cd:hover) ~ #SEMT {
+  display: flex;
+}
+
+#colleges:has(.ce:hover) ~ #BCPC {
+  display: flex;
+}
+
+.colSubList:hover {
+  display: flex;
+}
+
+.elasticCol:hover #colleges {
+  display: flex;
+}
+
+.acdSubList {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: fit-content;
+  position: absolute;
+  display: none;
+  right: calc(var(--size-2) + 416px);
+}
+.acdSubList a {
+  padding: var(--size-1);
+}
+
+#ACIM {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#AICTAaaS {
+  top: calc(var(--size-5) + var(--size-2) + var(--headers) + 8px);
+}
+
+#SA {
+  top: calc(var(--size-5) + var(--size-2) * 2 + var(--headers) * 1.65);
+}
+
+#PA {
+  top: calc((var(--size-5) + var(--size-2) * 2) * 2.74);
+}
+
+#academies:has(.aa:hover) ~ #ACIM {
+  display: flex;
+}
+
+#academies:has(.ab:hover) ~ #AICTAaaS {
+  display: flex;
+}
+
+#academies:has(.ac:hover) ~ #SA {
+  display: flex;
+}
+
+#academies:has(.ad:hover) ~ #PA {
+  display: flex;
+}
+
+.acdSubList:hover {
+  display: flex;
+}
+
+.elasticACD:hover #academies {
+  display: flex;
+}
+
+.joinSubList {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: fit-content;
+  position: absolute;
+  display: none;
+  right: calc(var(--size-2) + 416px);
+}
+.joinSubList a {
+  padding: var(--size-1);
+}
+
+#Admission {
+  top: calc(var(--size-5) + var(--size-2) + var(--size-1) - 2px);
+}
+
+#Partners {
+  top: calc(var(--size-5) + var(--size-2) + var(--headers) + 8px);
+}
+
+#About {
+  top: calc((var(--size-5) + var(--size-2) * 2) * 2.74);
+}
+
+#joinMenu:has(.ja:hover) ~ #Admission {
+  display: flex;
+}
+
+#joinMenu:has(.jb:hover) ~ #Partners {
+  display: flex;
+}
+
+#joinMenu:has(.jc:hover) ~ #About {
+  display: flex;
+}
+
+.JoinSubList:hover {
+  display: flex;
+}
+
+.elasticJoin:hover #joinMenu {
+  display: flex;
+}
+
+#hamShow {
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+}
+
+#open, #close {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: var(--size-2);
+  right: var(--size-2);
+  pointer-events: none;
+}
+
+#close {
+  display: none;
+}
+
+.hamMenu {
+  position: absolute;
+  top: calc(var(--size-5) + var(--size-2) * 2);
+  right: 0;
+  background-color: var(--white-1);
+  width: 22em;
+  display: none;
+  flex-direction: column;
+}
+
+.hamBtn {
+  background-color: var(--white-1);
+  border: 0;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  font-size: var(--size-1);
+  padding: 0;
+  transition: 0.2s;
+  padding: var(--size-1);
+}
+
+.hamMaster {
+  display: none;
+  flex-direction: column;
+}
+
+.hamLink {
+  color: var(--black-0);
+  text-decoration: none;
+  padding: var(--size-1);
+}
+
+.hamBtn:hover {
+  text-decoration: underline;
+}
+
+#hclink:hover {
+  background-image: linear-gradient(to right, var(--white-1), var(--colleges));
+}
+
+#halink:hover {
+  background-image: linear-gradient(to right, var(--white-1), var(--academies));
+}
+
+#hjlink:hover {
+  background-image: linear-gradient(to right, var(--white-1), var(--join));
+}
+
+.hamMenu:has(#mcol:hover) #hamColleges {
+  display: flex;
+}
+
+.hamMenu:has(#macd:hover) #hamAcademy {
+  display: flex;
+}
+
+.hamMenu:has(#mjus:hover) #hamJoin {
+  display: flex;
+}
+
+.hamMaster:hover {
+  display: flex;
+}
+
+#hamShow:checked ~ #open {
+  display: none;
+}
+
+@media screen and (max-width: 649px) {
+  header:has(#hamShow:checked) ~ .hamMenu {
+    display: flex;
+  }
+  #hamShow:checked ~ #close {
+    display: block;
+  }
+}
+@media screen and (min-width: 650px) {
+  #hamShow, #open {
+    display: none;
+  }
+}
+.mainHeader {
+  background-color: var(--primary-300);
+  color: var(--white-1);
+  height: var(--size-5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-2);
+}
+
+.home {
+  color: var(--white-1);
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-1);
+}
+
+.btn {
+  background-color: var(--primary-300);
+  color: var(--white-1);
+  border: 1px solid var(--white-1);
+  border-radius: 20px;
+  font-size: var(--size-1);
+  width: 8em;
+  padding: 0.7em;
+  transition: 0.2s;
+}
+
+.grad {
+  background-image: linear-gradient(to bottom, var(--primary-300), var(--clear-1));
+  height: var(--headers);
+}
+
+.submenu {
+  position: absolute;
+  right: var(--size-2);
+  top: calc(var(--size-5) + var(--size-2) - 2px);
+  display: none;
+  flex-direction: column;
+  gap: 0.3em;
+  width: 26em;
+  padding-top: var(--size-1);
+  padding-bottom: var(--size-1);
+  transition: 0.5s;
+  background-color: var(--white-1);
+}
+.submenu a {
+  background-image: none;
+  color: var(--black-0);
+  text-decoration: none;
+  padding: var(--size-1);
+  transition: 0.5s;
+}
+
+#colleges {
+  border-radius: 0 20px 20px 20px;
+}
+#colleges a:hover {
+  background-image: linear-gradient(to left, var(--white-1), var(--colleges));
+}
+
+#academies {
+  border-radius: 20px 20px 20px 20px;
+}
+#academies a:hover {
+  background-image: linear-gradient(to left, var(--white-1), var(--academies));
+}
+
+#joinMenu {
+  border-radius: 20px 0 20px 20px;
+}
+#joinMenu a:hover {
+  background-image: linear-gradient(to left, var(--white-1), var(--join));
+}
+
+header:has(#col:hover, #colleges:hover) #col {
+  background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+  color: var(--black-0);
+  font-weight: bolder;
+  border-radius: 20px 20px 0 0;
+  border: 0;
+}
+
+header:has(#acad:hover, #academies:hover) #acad {
+  background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+  color: var(--black-0);
+  font-weight: bolder;
+  border-radius: 20px 20px 0 0;
+  border: 0;
+}
+
+header:has(#join:hover, #joinMenu:hover) #join {
+  background-image: linear-gradient(to bottom, var(--secondary-500), var(--white-1));
+  color: var(--black-0);
+  font-weight: bolder;
+  border-radius: 20px 20px 0 0;
+  border: 0;
+}
+
+header:has(#col:hover) #colleges {
+  display: flex;
+}
+
+header:has(#acad:hover) #academies {
+  display: flex;
+}
+
+header:has(#join:hover) #joinMenu {
+  display: flex;
+}
+
+#colleges:hover {
+  display: flex;
+}
+
+#academies:hover {
+  display: flex;
+}
+
+#joinMenu:hover {
+  display: flex;
+}
+
+@media screen and (max-width: 650px) {
+  .btn, .submenu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

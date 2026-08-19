@@ -1,0 +1,109 @@
+//Trigger sizing for hamburger menu
+#hamShow{
+    width: 38px;
+    height: 38px;
+    opacity: 0;
+}
+
+//Sprites
+#open, #close{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: var(--size-2);
+    right:  var(--size-2);
+    pointer-events: none;
+}
+
+//Original status of close sprite.
+#close{
+    display: none;
+}
+
+//Hamburger menu position
+.hamMenu{
+    position: absolute;
+    top: calc(var(--size-5) + var(--size-2) * 2);
+    right: 0;
+    background-color: var(--white-1);
+    width: 22em;
+    display: none;
+    flex-direction: column;
+}
+
+//Hamburger menu buttons layout
+.hamBtn{
+    background-color: var(--white-1);
+    border: 0;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    font-size: var(--size-1);
+    padding:0;
+    transition: 0.2s;
+    padding: var(--size-1);
+}
+
+.hamMaster{
+    display: none;
+    flex-direction: column;
+}
+
+.hamLink{
+    color: var(--black-0);
+    text-decoration: none;
+    padding: var(--size-1)
+}
+
+//Hover behavior
+.hamBtn:hover{
+    text-decoration: underline;
+}
+
+#hclink:hover{
+    background-image: linear-gradient(to right, var(--white-1), var(--colleges));
+}
+
+#halink:hover{
+    background-image: linear-gradient(to right, var(--white-1), var(--academies));
+}
+
+#hjlink:hover{
+    background-image: linear-gradient(to right, var(--white-1), var(--join));
+}
+
+.hamMenu:has(#mcol:hover) #hamColleges{
+    display: flex;
+}
+
+.hamMenu:has(#macd:hover) #hamAcademy{
+    display: flex;
+}
+
+.hamMenu:has(#mjus:hover) #hamJoin{
+    display: flex;
+}
+
+.hamMaster:hover{
+    display: flex;
+}
+
+//Hamburger menus behavior
+#hamShow:checked ~ #open{
+    display: none;
+}
+
+@media screen and (max-width: 649px){
+    header:has(#hamShow:checked) ~ .hamMenu{
+        display: flex;
+    }
+    #hamShow:checked ~ #close{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #hamShow, #open{
+        display: none;
+    }
+}
