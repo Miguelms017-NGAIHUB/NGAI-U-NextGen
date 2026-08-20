@@ -547,4 +547,8 @@ header:has(#join:hover) #joinMenu {
   padding: var(--size-3);
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 /*# sourceMappingURL=style.css.map */

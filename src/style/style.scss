@@ -7,3 +7,7 @@
 
 //insert pages info
 @use "pages/index";
+
+html{
+    overscroll-behavior: none;
+}
