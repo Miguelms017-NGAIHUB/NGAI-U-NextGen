@@ -6,7 +6,16 @@
 //Insert Hamburger menu to header
 @use "hamMenu";
 
+//set content below gradient
+main{
+    margin-top: -4em;
+}
+
 //header Layout
+header{
+    z-index: 1;
+}
+
 .mainHeader{
     background-color: var(--primary-300);
     color: var(--white-1);

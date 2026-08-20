@@ -1,0 +1,26 @@
+.hero{
+    background-image: url(../../images/nasa-Q1p7bh3SHj8-unsplash.jpg);
+    height: 40em;
+    width: 100%;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#heroTitle{
+    position: absolute;
+    font-size: var(--headers);
+    bottom: var(--size-2);
+    right: var(--size-3);
+    margin: 0;
+}
+
+.content{
+    padding: var(--size-1);
+}
+
+.HeroDesc{
+    font-size: var(--size-2);
+    padding: var(--size-3);
+}
