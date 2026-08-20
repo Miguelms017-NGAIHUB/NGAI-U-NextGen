@@ -505,6 +505,15 @@ header:has(#join:hover) #joinMenu {
   display: flex;
 }
 
+.indepLink {
+  color: black;
+  text-decoration: none;
+}
+
+.elasticCol .indepLink:hover {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 650px) {
   .btn, .submenu {
     display: none;

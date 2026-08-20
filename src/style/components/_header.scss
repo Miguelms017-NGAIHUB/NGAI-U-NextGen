@@ -140,6 +140,19 @@ header:has(#join:hover) #joinMenu{
     display: flex;
 }
 
+//links on the sublists
+.indepLink{
+    color: black;
+    text-decoration: none;
+}
+
+
+.elasticCol{
+    .indepLink:hover{
+        font-weight: bold;
+    }
+}
+
 //On wide screens hides the trigger for Hamburger menu
 @media screen and (max-width: 650px) {
     .btn, .submenu{
